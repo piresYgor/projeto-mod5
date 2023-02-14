@@ -3,15 +3,15 @@
     <h1 class="title-create">Criando um Agendamento</h1>
     <form action="/clients/add" method="POST">
     <div class="form-control">
-       <input  class="i+.'npt" type="text" name="name">
+       <input  class="i+.'npt" type="text" name="name" required>
        <label class="Name" for="name">Nome</label>
     </div>
         <div class="form-control">
-        <input  class="inpt" type="date" name="date">
+        <input  class="inpt" type="date" name="date" required>
         <label  class="Name" for="date">Dia do corte</label>
     </div>
         <div class="form-control">
-        <input class="inpt" type="text" name="type_of_cut">
+        <input class="inpt" type="text" name="type_of_cut" required>
         <label  class="Name" for="type_of_cut">Tipo de corte</label>
     </div>
     <input class="inpt" type="submit" value=" Criar Agendamento">
