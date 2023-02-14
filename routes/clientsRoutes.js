@@ -9,6 +9,6 @@ router.get('/edit/:id', checkAuth, ClientController.updateClient)
 router.post('/edit', checkAuth, ClientController.updateClientSave)
 router.get('/dashboard', checkAuth, ClientController.dashboard)
 router.post('/remove', checkAuth, ClientController.removeClient)
-router.get('/', checkAuth, ClientController.showClients)
+router.get('/clients/dashboard', checkAuth, ClientController.showClients)
 
 module.exports = router

@@ -53,7 +53,7 @@ module.exports = class AuthController {
         req.flash('message', 'Cadastro realizado com sucesso!')
         
         req.session.save(() => {
-            res.redirect('/')
+            res.redirect('/clients/dashboard')
         })
         
        } catch(err) {
@@ -92,7 +92,7 @@ module.exports = class AuthController {
         req.session.userid = user.id
         req.flash('message', 'Autencicação realizada com sucesso!')
         req.session.save(() => {
-            res.redirect('/')
+            res.redirect('/clients/dashboard')
         })
     }
 

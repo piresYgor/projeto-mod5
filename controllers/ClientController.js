@@ -36,7 +36,7 @@ module.exports = class ClientController{
             clientsQty = false
         }
 
-        res.render('clients/home', {clients, search, clientsQty})
+        res.render('auth/login', {clients, search, clientsQty})
     }
 
     static async dashboard(req, res) {

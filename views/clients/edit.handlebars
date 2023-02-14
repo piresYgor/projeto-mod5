@@ -1,5 +1,5 @@
 <div class="agendamentos-form-container">
-    <a href="/clients/dashboard">Voltar</a>
+    <a class="inpt" type="submit" href="/clients/dashboard"> Voltar</a>
     <h1>Editando agendamento</h1>
     <form action="/clients/edit" method="post">
     <input type="hidden" name="id" value="{{client.id}}">
@@ -15,6 +15,6 @@
         <input type="text" name="type_of_cut" value="{{client.type_of_cut}}">
         <label for="type_of_cut">Tipo de corte</label>
     </div>
-    <input type="submit" value="Editar agendamento">
+    <input class="inpt" type="submit" value="Editar agendamento">
     </form>
 </div>

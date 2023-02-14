@@ -1,9 +1,13 @@
 *{
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 
 body{
     background: var(--preto-cinza);
+    width: 100vw;
+    
 }
 
 :root{
@@ -14,67 +18,126 @@ body{
 
 /*-----------navbar e footer-----------------*/
 
-.nav{
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    padding: 10px;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .menu a {
+    margin: 1em;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fffbfb;
+  }
+  
+  .menu a:hover {
+    transition: 0.5s;
+    color: #666;
+  }
+  
+  .logo{
+    
+    text-align: center;
+    
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+  }
+  
+  
+  footer p {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  footer span {
+    font-weight: bold;
+  }
+  
+/*dashboard*/
+
+
+.title-container{
+    display: flex;
+justify-content: space-between;
+margin-bottom: 1.5em;
+}
+.title-container h2{
+
+    color:var(--mostarda);
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+.dashboard ul {
+    list-style: none;
+}
+.sub-title{
+    color: #ffffff;
+    text-align: center;
+}
+.btn-1{
+   
+    color: #ffffff;
+    font-size: 20px;
+}
+.btn-1:hover{
+    transition: 0.5s;
+    color: red;
+    
+}
+
+.dashboard li {
+    padding: 12px;
+    border-bottom: 1px solid ;
     display: flex;
     align-items: center;
-    background: var(--mostarda);
+    justify-content: space-between;
 }
-
-.nav ul{
-    display: flex;
-    gap: 72px;
-    
+.dashboard .label{
+    font-weight: bold;
+    margin-right: 2em;
 }
-
-.nav ul li{
-    list-style: none;
-    
-}
-
-footer{
-    width: 100vw;
-    text-align: center;
-    font-weight: 400;
-}
-
-.nav ul li a{
-    font-size: 26px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--branco);
-    padding: 10px;
-    transition: 0.5s ease;
-    font-weight: 400;
-    padding: 8px 15px;
-    white-space: nowrap;
-    text-align: right;
-    position: inherit;
-    flex: 0 1 auto;
+.dashboard .actions{
     display: flex;
 }
-
-.nav ul:hover li a{
-    color: var(--preto-cinza);
+.dashboard .actions .btn{
+    color: #fff;
+    border-color: #fff;
+    margin: 0 0.5em;
+}
+.client{
+    font-size: 25px;
+    margin-top: 15px;
+    padding-top: 10px;
+    color:#fff;
 }
 
-.nav ul:hover li a:not(:hover){
-    color: var(--branco);
-    opacity: 0.3;
-    filter: blur(1px);
-}
 
-.nav a{
-    font-size: 26px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--preto-cinza);
-    padding: 10px;
-    transition: 0.5s ease;
-    font-weight: 400;
-    padding: 8px 15px;
-    white-space: nowrap;
-    text-align: right;
-}
+
 /*----------Login e register-------------*/
 .auth-container{
     position: absolute;
@@ -111,7 +174,7 @@ footer{
 .auth-container .form-control label{
     position: relative;
     left: 0;
-    top: -80px;
+    top: 8px;
     padding: 10px 0;
     font-size: 16px;
     color: var(--branco);
@@ -119,13 +182,13 @@ footer{
     transition: .5s;
 }
 
-/*.auth-container .form-control input:focus ~ label,
+.auth-container .form-control input:focus ~ label,
 .auth-container .form-control input:valid ~ label{
     top: -85px;
     left: 0;
     color: var(--mostarda);
     font-size: 12px;
-}*/
+}
 
 .auth-container2{
     position: absolute;
@@ -191,7 +254,7 @@ footer{
     box-shadow: 0 0 5px #f0b955, 0 0 25px #f0b955, 0 0 50px #f0b955, 0 0 100px #f0b955;
 }
 
-.form-btn{
+.form-btn1{
     display: flex;
     flex-direction: row;
     margin-top: 20px;
@@ -211,3 +274,123 @@ footer{
     color: var(--mostarda);
     text-decoration: none;
 }
+
+.agendamentos-form-container {
+max-width: 600px;
+margin: 0 auto;
+text-align: center;
+}
+
+h1 {
+    color: #fff;
+font-size: 36px;
+margin-bottom: 40px;
+}
+
+.form-control {
+margin-bottom: 20px;
+}
+
+label {
+color: #fff;
+display: block;
+font-size: 20px;
+margin-bottom: 10px;
+text-align: left;
+}
+
+.inpt {
+width: 100%;
+padding: 10px;
+font-size: 20px;
+border: none;
+border-bottom: 2px solid #ccc;
+}
+
+.btn {
+background-color: #008CBA;
+color: white;
+padding: 10px 20px;
+font-size: 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+a {
+display: inline-block;
+margin-top: 20px;
+font-size: 20px;
+text-decoration: none;
+color: #008CBA;
+}
+
+.agendamentos-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .agendamentos-form-container a {
+    display: inline-block;
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  
+  .agendamentos-form-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-control label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .form-control input[type="text"],
+  .form-control input[type="date"] {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-control input[type="text"]:focus,
+  .form-control input[type="date"]:focus {
+    outline: none;
+    border-color: #008CBA;
+  }
+  
+  .inpt[type="submit"] {
+    display: inline-block;
+    background-color: var(--mostarda);
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  .inpt:hover{
+    transition: 0.5s;
+    color: red;
+  }
+  

@@ -1,12 +1,15 @@
 <div class="dashboard">
     <div class="title-container">
         <h2 class="title-h2">Dashboard</h2>
-        <a href="/clients/add" class="btn"> Fazer agendamento</a>
+        <div class="fzr">
+            <a href="/clients/add" class="btn-1 inpt" type="submit"> Fazer agendamento</a>
+            </div>
+        
     </div>
-    <h3>Olá! Aqui está seus clientes agendados.</h3>
+    <h2 class="sub-title">Olá! Aqui está seus clientes agendados.</h2>
     <ul>
         {{#each clients}}
-            <li>
+            <li class="client">
                 Cliente:
                 {{this.name}} --
                 Data agendada:
@@ -14,10 +17,10 @@
                 Tipo de corte:
                 {{this.type_of_cut}}
                 <span class="actions">
-                    <a href="/clients/edit/{{this.id}}" class="btn">Editar</a>
+                    <a href="/clients/edit/{{this.id}}" type='submit' class="inpt">Editar</a>
                     <form action="/clients/remove" method="POST">
-                        <input type="hidden" name="id" class="btn" value="{{this.id}}">
-                        <input type="submit" value="Excluir" class="btn">
+                        <input class="inpt" type="hidden" name="id" class="btn" value="{{this.id}}">
+                        <input class="inpt" type="submit" value="Excluir" class="btn">
                     </form>
                 </span>
             </li>
