@@ -1,0 +1,91 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body id="login">
+    <main>
+        <div class="auth-container container">
+            <div class="row vh-100">
+                <div class="col d-flex justify-content-center my-5 flex-column">
+                    <div class="text-login">
+                        <p>Organize suas finâcias de uma forma facil </p>
+                        <p>Controle seu dinheiro e investimentos</p>
+                        <p>Economize e atinja seus objetivos</p>
+
+                    </div>
+                    <div class="text-center ">
+                        <img src="./assets/images/pocket.png" alt="image pocket" class="img-fluid" srcset="">
+                        <img src="assets/images/coins.png" alt="imagem coins" class="img-fluid d-none d-md-inline coins"
+                            srcset="">
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center my-5 flex-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center mb-3">
+                                    <img src="assets/images/nikel-logo.png" alt="logo nikel" class="img-fluid"
+                                        srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <form id="login-form" action="/login" method="POST">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="email" >E-mail </label>
+                                        <input type="email" name="email" class="form-control" id="email-input"
+                                            aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">Utilize seu e-mail para realizar seu
+                                            login.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Senha</label>
+                                        <input type="password" name="password" class="form-control" id="password-input">
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="session-check">
+                                        <label class="form-check-label" for="session-check">Permanecer logado.</label>
+                                    </div>
+                                    <button type="submit" value="Entrar" class="btn button-login">Entrar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col ">
+                                <p class="text-center mt-2 form-text" data-bs-toggle="modal"
+                                    data-bs-target="#register-modal">Ainda não tem conta? <a
+                                     class="link-default" href="/register"  >Criar uma conta</a> </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center mt-5">
+                                    <img src="assets/images/codai-logo.png" alt="logo codai" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center">
+                                    <img src="assets/images/growdev-logo.png" alt="logo Growdev" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
