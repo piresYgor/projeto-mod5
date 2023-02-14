@@ -1,0 +1,44 @@
+<div class="home-header">
+    {{#if search}}
+    <h1>Você está buscando por: <span>{{search}}</span></h1>
+    {{#if clientsQty}}
+        <p>Foram encontrados <span>{{clientsQty}}</span> clientes</p>
+    {{else}}
+        <p>Nenhum cliente encontrado pelo termo <span>{{search}}</span></p>
+    {{/if}}
+    {{else}}
+    <h1>Veja todos os nossos <span>Clientes</span>:</h1>
+    {{/if}}
+    <form action="/" method="get">
+        <input type="text" name="search" placeholder="Procure aqui nossos agendamentos">
+        <input type="submit" value="Buscar" class="btn">
+    </form>
+    <div class="order-container">
+        <span>Ordenar por:</span>
+        <form action="/" method="get">
+        <input type="hidden" name="search" value="{{this.search}}">
+        <input type="hidden" name="order" value="new">
+        <button type="submit"><i class="bi bi-arrow-up">Mais recentes</i></button>
+        </form>
+        <form action="/" method="get">
+        <input type="hidden" name="search" value="{{this.search}}">
+        <input type="hidden" name="order" value="old">
+        <button type="submit"><i class="bi bi-arrow-down">Mais antigos</i></button>
+        </form>
+        <a href="/">Limpar</a>
+    </div>
+</div>
+<div class="clients-container">
+    {{#each clients}}
+    <figure>
+        <blockquote>
+            Cliente:{{this.name}}
+            Data agendada:{{this.date}}
+            Tipo de corte:{{this.type_of_cut}}
+        </blockquote>
+        <figcaption>
+            cliente do <span>{{this.User.name}}</span>
+        </figcaption>
+    </figure>
+    {{/each}}
+</div>

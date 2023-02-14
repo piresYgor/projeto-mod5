@@ -1,0 +1,26 @@
+<div class="dashboard">
+    <div class="title-container">
+        <h2 class="title-h2">Dashboard</h2>
+        <a href="/clients/add" class="btn"> Fazer agendamento</a>
+    </div>
+    <h3>Olá! Aqui está seus clientes agendados.</h3>
+    <ul>
+        {{#each clients}}
+            <li>
+                Cliente:
+                {{this.name}} --
+                Data agendada:
+                {{this.date}} --
+                Tipo de corte:
+                {{this.type_of_cut}}
+                <span class="actions">
+                    <a href="/clients/edit/{{this.id}}" class="btn">Editar</a>
+                    <form action="/clients/remove" method="POST">
+                        <input type="hidden" name="id" class="btn" value="{{this.id}}">
+                        <input type="submit" value="Excluir" class="btn">
+                    </form>
+                </span>
+            </li>
+        {{/each}}
+    </ul>
+</div>
